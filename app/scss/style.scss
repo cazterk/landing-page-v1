@@ -1,2 +1,12 @@
-@use 'globals';
-@use 'components';
+@use "globals";
+@use "components";
+
+// font awesome
+
+// in your main SCSS file
+@import "./assets/font-awesome/fontawesome.scss";
+
+// import one or more styles
+@import "./assets/font-awesome/regular.scss";
+@import "./assets/font-awesome/solid.scss";
+@import "./assets/font-awesome/brands.scss";
