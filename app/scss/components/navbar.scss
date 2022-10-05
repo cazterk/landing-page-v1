@@ -1,1 +1,65 @@
-@use '../util' as *;
+@use "../util" as *;
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  height: rem(80);
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+
+  &__logo {
+    font-family: "Now Bold";
+    color: var(--accent-color);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: rem(32);
+    // font-weight: 900;
+    margin-left: rem(24);
+    @extend %align-center;
+  }
+
+  &__bars {
+    color: var(--black);
+    position: absolute;
+    top: rem(22);
+    right: rem(20);
+    font-size: rem(32);
+
+    @include breakpoint(large) {
+      opacity: 0;
+    }
+  }
+
+  &__menu {
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: rem(24);
+    display: none;
+
+    @include breakpoint(large) {
+      display: flex;
+    }
+
+    &--links {
+      color: var(--black);
+      @extend %align-center;
+      justify-content: center;
+      text-decoration: none;
+      padding: (0) rem(16);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--accent-color);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

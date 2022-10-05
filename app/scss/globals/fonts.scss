@@ -1,3 +1,49 @@
+@font-face {
+  font-family: "Now Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Now Regular"),
+    url("/app/assets/fonts/Now-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Now Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Now Thin"), url("/app/assets/fonts/Now-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Now Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Now Light"),
+    url("/app/assets/fonts/Now-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Now Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Now Medium"),
+    url("/app/assets/fonts/Now-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Now Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Now Bold"), url("/app/assets/fonts/Now-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Now Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Now Black"),
+    url("/app/assets/fonts/Now-Black.woff") format("woff");
+}
+
 :root {
-	--font-body: Arial, sans-serif;
+  font-family: "Now Regular";
 }
