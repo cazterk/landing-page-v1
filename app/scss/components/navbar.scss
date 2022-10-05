@@ -20,7 +20,6 @@
     cursor: pointer;
     text-decoration: none;
     font-size: rem(32);
-    // font-weight: 900;
     margin-left: rem(24);
     @include align-center();
   }
@@ -31,6 +30,7 @@
     top: rem(22);
     right: rem(20);
     font-size: rem(32);
+    z-index: 2;
 
     @include breakpoint(large) {
       opacity: 0;
@@ -46,6 +46,7 @@
     list-style: none;
     text-align: center;
     background-color: var(--light-orange);
+    transform: translateX(100%);
 
     @include breakpoint(medium) {
       inset: 0 0 0 70%;
@@ -58,6 +59,7 @@
       padding: 0;
       inset: 0;
       background-color: var(--white);
+      transform: none;
     }
 
     &--links {
@@ -65,7 +67,7 @@
       @include align-center();
       justify-content: start;
       text-decoration: none;
-      padding: rem(16) rem(16);
+      padding: rem(20);
       cursor: pointer;
 
       @include breakpoint(large) {
@@ -77,5 +79,8 @@
         transition: all 0.3s ease;
       }
     }
+  }
+  &__menu[data-visible="true"] {
+    transform: translateX(0%);
   }
 }

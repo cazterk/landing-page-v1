@@ -17,10 +17,14 @@
         class="navbar__logo"
         >CAZTERK</a
       >
-      <div class="navbar__bars">
+      <div
+        aria-controls="navbar__menu"
+        aria-expanded="false"
+        class="navbar__bars"
+      >
         <i class="fa-solid fa-bars"></i>
       </div>
-      <div class="navbar__menu">
+      <div class="navbar__menu" data-visible="false">
         <a href="#" class="navbar__menu--links">Intro</a>
         <a href="#" class="navbar__menu--links">Skills</a>
         <a href="#" class="navbar__menu--links">Projects</a>
