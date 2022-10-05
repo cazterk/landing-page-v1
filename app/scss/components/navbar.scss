@@ -1,6 +1,6 @@
 @use "../util" as *;
 
-%align-center {
+@mixin align-center() {
   display: flex;
   align-items: center;
 }
@@ -22,7 +22,7 @@
     font-size: rem(32);
     // font-weight: 900;
     margin-left: rem(24);
-    @extend %align-center;
+    @include align-center();
   }
 
   &__bars {
@@ -38,23 +38,39 @@
   }
 
   &__menu {
-    @extend %align-center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: min(30vh, 5rem) rem(32);
     list-style: none;
     text-align: center;
-    margin-right: rem(24);
-    display: none;
+    background-color: var(--light-orange);
 
+    @include breakpoint(medium) {
+      inset: 0 0 0 70%;
+    }
     @include breakpoint(large) {
-      display: flex;
+      @include align-center();
+      flex-direction: row;
+      position: relative;
+      margin-right: rem(24);
+      padding: 0;
+      inset: 0;
+      background-color: var(--white);
     }
 
     &--links {
       color: var(--black);
-      @extend %align-center;
-      justify-content: center;
+      @include align-center();
+      justify-content: start;
       text-decoration: none;
-      padding: (0) rem(16);
+      padding: rem(16) rem(16);
       cursor: pointer;
+
+      @include breakpoint(large) {
+        padding: rem(0) rem(16);
+      }
 
       &:hover {
         color: var(--accent-color);
