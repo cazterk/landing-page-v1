@@ -35,6 +35,10 @@
     @include breakpoint(large) {
       opacity: 0;
     }
+
+    @include breakpoint-down(smallest) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -47,6 +51,7 @@
     text-align: center;
     background-color: var(--light-orange);
     transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
 
     @include breakpoint(medium) {
       inset: 0 0 0 70%;

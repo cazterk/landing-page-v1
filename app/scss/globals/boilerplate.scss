@@ -14,3 +14,8 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+.resize-animation-stopper * {
+  transition: none !important;
+  animation: none !important;
+}
