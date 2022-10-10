@@ -1,0 +1,28 @@
+@use "../util" as *;
+
+.skills {
+  padding: rem(8) calc((100vw - 1200px) / 2);
+
+  &__container {
+    display: grid;
+    margin: 0 rem(24);
+    max-width: rem(1200);
+    gap: rem(32);
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--skill {
+      background-color: var(--light-red);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: rem(20);
+      height: rem(192);
+      text-align: center;
+    }
+  }
+}

@@ -2,8 +2,7 @@
 
 .hero {
   margin: rem(32) 0;
-  padding: 0.5rem calc((100vw - 1200px) / 2);
-
+  padding: rem(8) calc((100vw - 1200px) / 2);
   &__container {
     display: flex;
     flex-direction: column;
@@ -17,7 +16,6 @@
       span {
         color: var(--accent-color);
       }
-      //   text-transform: uppercase;
 
       @include breakpoint(large) {
         max-width: fit-content;
