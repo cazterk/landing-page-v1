@@ -2,7 +2,10 @@
 
 .skills {
   padding: rem(8) calc((100vw - 1200px) / 2);
-
+  h1 {
+    text-align: center;
+    padding: rem(8) 0;
+  }
   &__container {
     display: grid;
     margin: 0 rem(24);
