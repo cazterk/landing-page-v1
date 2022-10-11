@@ -2,7 +2,8 @@
 
 .hero {
   margin: rem(32) 0;
-  padding: rem(8) calc((100vw - 1200px) / 2);
+  @include container-padding();
+
   &__container {
     display: flex;
     flex-direction: column;

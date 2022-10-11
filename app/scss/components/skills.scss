@@ -3,11 +3,11 @@
 .skills {
   display: grid;
   justify-content: center;
-  padding: rem(8) calc((100vw - 1200px) / 2);
+  @include container-padding();
 
   h1 {
     font-family: "Now Medium";
-    font-size: rem(32);
+    font-size: rem(30);
     text-align: center;
     padding: rem(8) 0;
     color: var(--accent-color);

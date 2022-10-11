@@ -1,0 +1,14 @@
+@use "../util" as *;
+
+.projects {
+  margin: rem(32) 0;
+  @include container-padding();
+
+  h1 {
+    font-family: "Now Medium";
+    font-size: rem(30);
+    text-align: center;
+    padding: rem(8) 0;
+    color: var(--accent-color);
+  }
+}
