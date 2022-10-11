@@ -25,8 +25,7 @@
     p {
       max-width: rem(700);
       font-size: rem(20);
-      font-weight: 600;
-      //   opacity: 0.93;
+
       color: var(--gray);
 
       @include breakpoint(large) {
