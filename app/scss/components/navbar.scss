@@ -1,10 +1,5 @@
 @use "../util" as *;
 
-@mixin align-center() {
-  display: flex;
-  align-items: center;
-}
-
 .navbar {
   height: rem(80);
   display: flex;
