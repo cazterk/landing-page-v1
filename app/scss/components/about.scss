@@ -1,0 +1,13 @@
+@use "../util" as *;
+
+.about {
+  @include container-padding();
+
+  h1 {
+    font-family: "Now Medium";
+    font-size: rem(25);
+    text-align: center;
+    padding: rem(8) 0;
+    color: var(--accent-color);
+  }
+}
