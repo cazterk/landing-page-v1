@@ -1,14 +1,70 @@
 @use "../util" as *;
 
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
+}
+
 .projects {
   margin: rem(32) 0;
-  @include container-padding();
+
+  // @include container-padding();
 
   h1 {
     font-family: "Now Medium";
-    font-size: rem(30);
+    font-size: rem(25);
     text-align: center;
     padding: rem(8) 0;
     color: var(--accent-color);
+  }
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(medium) {
+      height: rem(250);
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: rem(16);
+      padding: rem(8);
+
+      #clone {
+        display: none;
+      }
+
+      @include breakpoint(medium) {
+        #clone {
+          display: block;
+        }
+        flex-direction: row;
+        animation: scroll $animationSpeed linear infinite;
+        width: calc(250px * 14);
+      }
+
+      &--project {
+        height: rem(130);
+        width: rem(416);
+        border-radius: rem(15);
+        margin: rem(10) 0;
+        box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          transition: all 200ms ease-in-out;
+          transform: scale(1.05);
+        }
+      }
+    }
   }
 }
