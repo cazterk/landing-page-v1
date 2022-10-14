@@ -8,14 +8,18 @@ $animationSpeed: 40s;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 5));
+    transform: translateX(calc(-416px * 5));
   }
 }
 
 .projects {
   margin: rem(32) 0;
 
-  // @include container-padding();
+  @include container-padding();
+
+  @include breakpoint(large) {
+    padding: 0;
+  }
 
   h1 {
     font-family: "Now Medium";
@@ -45,20 +49,26 @@ $animationSpeed: 40s;
       }
 
       @include breakpoint(medium) {
+        padding: 0;
+
         #clone {
           display: block;
         }
         flex-direction: row;
         animation: scroll $animationSpeed linear infinite;
-        width: calc(250px * 14);
+        width: calc(416px * 10);
       }
 
       &--project {
         height: rem(130);
-        width: rem(416);
         border-radius: rem(15);
         margin: rem(10) 0;
         box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
+
+        @include breakpoint(medium) {
+          height: rem(130);
+          width: rem(416);
+        }
 
         &:hover {
           transition: all 200ms ease-in-out;
