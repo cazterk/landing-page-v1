@@ -1,6 +1,6 @@
 @use "../util" as *;
 
-$animationSpeed: 40s;
+$animationSpeed: 0s;
 
 // Animation
 @keyframes scroll {
@@ -60,19 +60,28 @@ $animationSpeed: 40s;
       }
 
       &--project {
-        height: rem(130);
+        height: rem(170);
         border-radius: rem(15);
         margin: rem(10) 0;
         box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
 
         @include breakpoint(medium) {
-          height: rem(130);
           width: rem(416);
         }
 
         &:hover {
           transition: all 200ms ease-in-out;
           transform: scale(1.05);
+        }
+
+        &__content {
+          padding: rem(8);
+          h4 {
+          }
+
+          p {
+            color: var(--gray);
+          }
         }
       }
     }
