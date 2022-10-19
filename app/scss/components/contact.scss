@@ -1,8 +1,7 @@
 @use "../util" as *;
 
-.skills {
-  display: grid;
-  justify-content: center;
+.contact {
+  margin: rem(32) 0;
   @include container-padding();
 
   h2 {
@@ -14,22 +13,16 @@
   }
 
   &__container {
-    display: grid;
-    justify-items: center;
-    margin: 0 rem(24);
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
     gap: rem(10);
-    grid-template-columns: repeat(3, 1fr);
-
-    @include breakpoint(large) {
-      grid-template-columns: repeat(4, 0.2fr) !important;
-    }
 
     @include breakpoint(medium) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: rem(16);
+      flex-direction: row;
     }
 
-    &--skill {
+    &--item {
       @include center-center();
       border: rem(1) solid rgba(255, 255, 255, 0.5);
       max-width: rem(900);
@@ -40,25 +33,18 @@
       text-align: center;
       background-color: var(--white);
 
-      img {
-        width: rem(64);
-        height: rem(64);
+      a {
+        text-decoration: none;
 
-        @include breakpoint(medium) {
-          width: rem(112);
-          height: rem(112);
+        i {
+          font-size: rem(40);
+          color: var(--black);
         }
       }
 
       &:hover {
         transition: all 200ms ease-in-out;
         transform: scale(1.05);
-        box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
-      }
-
-      @include breakpoint(medium) {
-        width: rem(160);
-        height: rem(160);
       }
     }
   }
