@@ -10,4 +10,25 @@
     padding: rem(8) 0;
     color: var(--accent-color);
   }
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    &--content {
+      max-width: rem(650);
+      margin: 0 rem(32);
+      box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
+      padding: rem(20);
+
+      p {
+        color: var(--gray);
+        margin: 0;
+      }
+
+      &:hover {
+        transition: all 200ms ease-in-out;
+        transform: scale(1.05);
+      }
+    }
+  }
 }
