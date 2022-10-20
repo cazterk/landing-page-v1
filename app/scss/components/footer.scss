@@ -1,0 +1,49 @@
+@use "../util" as *;
+
+.footer {
+  @include container-padding();
+  @include justify-center();
+
+  &__container {
+    @include center-center();
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    padding: rem(32) 0;
+    border-top: rem(1) solid var(--light-gray);
+
+    #year {
+      p {
+        margin: rem(10) 0;
+        color: var(--gray);
+      }
+    }
+
+    &--items {
+      a {
+        text-decoration: none;
+
+        #github {
+          color: hsl(0, 5%, 9%);
+        }
+        #youtube {
+          color: hsl(0, 100%, 50%);
+        }
+
+        #twitter {
+          color: hsl(203, 89%, 53%);
+        }
+
+        #facebook {
+          color: hsl(220, 46%, 48%);
+        }
+
+        i {
+          font-size: rem(22);
+          text-decoration: none;
+          margin: 0 rem(5);
+        }
+      }
+    }
+  }
+}

@@ -23,10 +23,6 @@ $animationSpeed: 40s;
     overflow: hidden;
     position: relative;
 
-    @include breakpoint(medium) {
-      height: rem(250);
-    }
-
     &__item {
       display: flex;
       justify-content: center;

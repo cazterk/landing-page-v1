@@ -1,5 +1,6 @@
 const navigationMenu = document.querySelector(".navbar__menu");
 const navToggle = document.querySelector(".navbar__bars");
+const year = document.querySelector("#year");
 
 let resizeTimer;
 
@@ -25,5 +26,12 @@ const preventUnwantedTransitions = () => {
   }, 400);
 };
 
+const getCurrentYear = () => {
+  let currentYear = new Date();
+  let date = currentYear.getFullYear();
+  return (year.innerHTML = `<p>© ${date} cazterk </p>`);
+};
+
+getCurrentYear();
 navToggle.addEventListener("click", toggleAcions);
 window.addEventListener("resize", preventUnwantedTransitions);
