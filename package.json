@@ -5,6 +5,9 @@
   "keywords": [],
   "author": "cazterk (@cazterk)",
   "license": "ISC",
+  "scripts": {
+    "build": "gulp build"
+  },
   "dependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",

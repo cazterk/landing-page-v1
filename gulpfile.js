@@ -87,3 +87,5 @@ exports.default = series(
   browserSyncServe,
   watchTask
 );
+
+exports.build = series(copyfontawesomeWebfontsTask, scssTask, jsTask);
