@@ -1,6 +1,7 @@
 const navigationMenu = document.querySelector(".navbar__menu");
 const navToggle = document.querySelector(".navbar__bars");
 const year = document.querySelector("#year");
+const bars = document.getElementById("bars");
 
 let resizeTimer;
 
@@ -10,10 +11,12 @@ const toggleAcions = () => {
   if (visibility === "false") {
     navigationMenu.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
+    bars.style.position = "fixed";
     return (navToggle.innerHTML = `<i class="fa-solid fa-xmark" ></i>`);
   } else {
     navigationMenu.setAttribute("data-visible", false);
     navToggle.setAttribute("aria-expanded", false);
+    bars.style.position = " absolute";
     return (navToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`);
   }
 };
@@ -34,4 +37,5 @@ const getCurrentYear = () => {
 
 getCurrentYear();
 navToggle.addEventListener("click", toggleAcions);
+navigationMenu.addEventListener("click", toggleAcions);
 window.addEventListener("resize", preventUnwantedTransitions);
