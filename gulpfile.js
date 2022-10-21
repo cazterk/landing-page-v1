@@ -88,4 +88,5 @@ exports.default = series(
   watchTask
 );
 
+// deployment settings
 exports.build = series(copyfontawesomeWebfontsTask, scssTask, jsTask);
