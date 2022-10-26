@@ -18,47 +18,40 @@
     justify-items: center;
     margin: 0 rem(24);
     gap: rem(10);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     @include breakpoint(large) {
       grid-template-columns: repeat(4, 0.2fr) !important;
     }
 
     @include breakpoint(medium) {
-      grid-template-columns: repeat(3, 1fr);
       gap: rem(16);
     }
 
     &--skill {
       @include center-center();
-      border: rem(1) solid rgba(255, 255, 255, 0.5);
+      border: rem(2) solid #facece;
       max-width: rem(900);
-      padding: rem(20);
-      width: rem(96);
-      height: rem(96);
-      border-radius: rem(2);
+      width: rem(75);
+      height: rem(75);
+      border-radius: rem(10);
       text-align: center;
       background-color: var(--white);
 
-      img {
-        width: rem(64);
-        height: rem(64);
+      @include breakpoint(medium) {
+        width: rem(100);
+        height: rem(100);
+      }
 
-        @include breakpoint(medium) {
-          width: rem(112);
-          height: rem(112);
-        }
+      img {
+        width: 60%;
+        height: 60%;
       }
 
       &:hover {
         transition: all 200ms ease-in-out;
         transform: scale(1.05);
         box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
-      }
-
-      @include breakpoint(medium) {
-        width: rem(160);
-        height: rem(160);
       }
     }
   }

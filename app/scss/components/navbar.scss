@@ -9,13 +9,16 @@
   @include container-padding();
 
   &__logo {
-    font-family: "Now Bold";
+    font-family: "Now Black";
     color: var(--accent-color);
     cursor: pointer;
     text-decoration: none;
-    font-size: rem(30);
+    font-size: rem(18);
     margin-left: rem(24);
     @include align-center();
+
+    //uppercase
+    text-transform: uppercase;
   }
 
   &__bars {
