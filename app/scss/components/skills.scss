@@ -30,13 +30,14 @@
 
     &--skill {
       @include center-center();
-      border: rem(2) solid #facece;
+      // border: rem(1) solid #facece;
       max-width: rem(900);
       width: rem(75);
       height: rem(75);
       border-radius: rem(10);
       text-align: center;
       background-color: var(--white);
+      box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
 
       @include breakpoint(medium) {
         width: rem(100);
@@ -51,7 +52,6 @@
       &:hover {
         transition: all 200ms ease-in-out;
         transform: scale(1.05);
-        box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
       }
     }
   }
