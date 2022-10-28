@@ -10,7 +10,12 @@ const browsersync = require("browser-sync").create();
 // in your gulpfile
 const fileExists = require("file-exists");
 const gulpif = require("gulp-if");
-var gulp = require("gulp");
+// fontawesome
+const webFontsPath = "./node_modules/@fortawesome/fontawesome-free/webfonts/*";
+const distWebfonts = "dist/webfonts";
+// use a file of webfonts to check it's existing then make a copy in dist
+const fontawesomeWebfont =
+  "./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot";
 
 // Sass Task
 function scssTask() {
@@ -19,17 +24,6 @@ function scssTask() {
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("dist", { sourcemaps: "." }));
 }
-
-// fontawesome
-const webFontsPath = "./node_modules/@fortawesome/fontawesome-free/webfonts/*";
-const distWebfonts = "dist/webfonts";
-
-// use a file of webfonts to check it's existing then make a copy in dist
-const fontawesomeWebfont =
-  "./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot";
-
-// to check if file exists or not for testing purposes
-console.log(fileExists.sync(fontawesomeWebfont)); // OUTPUTS: true or false
 
 // copy webfonts folder if it exists
 // because our task contains asynchronous code
