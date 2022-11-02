@@ -11,8 +11,8 @@
 
     h1 {
       max-width: rem(750);
-      font-family: "Now Medium";
-      font-size: rem(35);
+      font-family: "Now Black";
+      font-size: rem(40);
       opacity: 0.8;
 
       span {
@@ -20,7 +20,7 @@
       }
 
       @include breakpoint(medium) {
-        font-size: rem(40);
+        font-size: rem(45);
       }
 
       @include breakpoint(large) {
