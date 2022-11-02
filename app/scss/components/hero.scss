@@ -48,7 +48,7 @@
       background-color: var(--accent-color);
       border: none;
       outline: none;
-      border-radius: rem(4);
+      border-radius: var(--border-radius);
       cursor: pointer;
 
       a {

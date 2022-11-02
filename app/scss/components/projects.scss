@@ -47,7 +47,7 @@ $animationSpeed: 50s;
 
       &--project {
         height: rem(150);
-        border-radius: rem(10);
+        border-radius: var(--border-radius);
         margin: rem(10) 0;
         box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
 
