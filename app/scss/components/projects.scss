@@ -1,7 +1,112 @@
 @use "../util" as *;
 
-// variables
-$animationSpeed: 50s;
+// // variables
+// $animationSpeed: 50s;
+@mixin first_project() {
+  height: rem(200);
+  border-radius: var(--border-radius);
+  margin: rem(10) 0;
+  box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
+
+  @include breakpoint(medium) {
+    height: rem(190);
+    width: rem(350);
+    &:hover {
+      transition: all 200ms ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+}
+@mixin second_project() {
+  height: rem(200);
+  border-radius: var(--border-radius);
+  margin: rem(10) 0;
+  box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
+
+  @include breakpoint(medium) {
+    height: rem(170);
+    width: rem(350);
+    &:hover {
+      transition: all 200ms ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@mixin third_project() {
+  height: rem(200);
+  border-radius: var(--border-radius);
+  margin: rem(10) 0;
+  box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
+
+  @include breakpoint(medium) {
+    height: 100%;
+    width: rem(350);
+    &:hover {
+      transition: all 200ms ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@mixin content() {
+  padding: rem(16) rem(10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+
+  p {
+    margin: 0;
+    color: var(--gray);
+    a {
+      text-decoration: none;
+      color: var(--accent-color);
+    }
+
+    span {
+      padding: 0 rem(16);
+    }
+  }
+}
+
+@mixin content_third() {
+  padding: rem(16) rem(10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+
+  p {
+    margin: 0;
+    color: var(--gray);
+    a {
+      text-decoration: none;
+      color: var(--accent-color);
+    }
+
+    span {
+      padding: 0 rem(16);
+    }
+  }
+
+  @include breakpoint(medium) {
+    justify-content: center;
+
+    p {
+      margin: 1rem 0;
+      color: var(--gray);
+      a {
+        text-decoration: none;
+        color: var(--accent-color);
+      }
+
+      span {
+        padding: 0 rem(16);
+      }
+    }
+  }
+}
 
 .projects {
   margin: rem(32) 0;
@@ -28,21 +133,57 @@ $animationSpeed: 50s;
       justify-content: center;
       flex-direction: column;
       gap: rem(16);
-      padding: rem(8);
-
-      #clone {
-        display: none;
-      }
+      padding: rem(24) rem(8);
 
       @include breakpoint(medium) {
-        padding: 0;
-
-        #clone {
-          display: block;
-        }
         flex-direction: row;
-        animation: scroll $animationSpeed linear infinite;
-        width: calc(416px * 10);
+      }
+
+      //       #clone {
+      //         display: none;
+      //       }
+
+      //       @include breakpoint(medium) {
+      //         padding: 0;
+
+      //         #clone {
+      //           display: block;
+      //         }
+      //         flex-direction: row;
+      //         animation: scroll $animationSpeed linear infinite;
+      //         width: calc(416px * 10);
+      //       }
+      &__first {
+        &__project {
+          @include first_project();
+
+          &--content {
+            @include content();
+          }
+        }
+      }
+
+      &__second {
+        @include breakpoint(medium) {
+          padding: 2rem 0;
+        }
+        &__project {
+          @include second_project();
+
+          &--content {
+            @include content();
+          }
+        }
+      }
+
+      &__third {
+        &__project {
+          @include third_project();
+
+          &--content {
+            @include content_third();
+          }
+        }
       }
 
       &--project {
@@ -59,32 +200,35 @@ $animationSpeed: 50s;
           }
         }
 
-        &__content {
-          padding: rem(16) rem(10);
+        // &__content {
+        //   padding: rem(16) rem(10);
 
-          p {
-            color: var(--gray);
-            a {
-              text-decoration: none;
-              color: var(--accent-color);
-            }
+        //   p {
+        //     color: var(--gray);
+        //     a {
+        //       text-decoration: none;
+        //       color: var(--accent-color);
+        //     }
 
-            span {
-              padding: 0 rem(16);
-            }
-          }
-        }
+        //     span {
+        //       padding: 0 rem(16);
+        //     }
+        //   }
+        // }
+        //       }
+        //     }
+        //   }
       }
-    }
-  }
-}
 
-// Animation
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-416px * 5));
+      // // Animation
+      // // @keyframes scroll {
+      // //   0% {
+      // //     transform: translateX(0);
+      // //   }
+      // //   100% {
+      // //     transform: translateX(calc(-416px * 5));
+      // //   }
+      // }
+    }
   }
 }
