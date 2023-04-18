@@ -8,7 +8,7 @@
   margin: rem(10) 0;
   box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     height: rem(190);
     width: rem(350);
     &:hover {
@@ -23,7 +23,7 @@
   margin: rem(10) 0;
   box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     height: rem(170);
     width: rem(350);
     &:hover {
@@ -39,7 +39,7 @@
   margin: rem(10) 0;
   box-shadow: 0 rem(5) rem(15) rem(0) rgba(0, 0, 0, 0.1);
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     height: 100%;
     width: rem(350);
     &:hover {
@@ -133,10 +133,12 @@
       justify-content: center;
       flex-direction: column;
       gap: rem(16);
-      padding: rem(24) rem(8);
+      padding: rem(24);
 
-      @include breakpoint(medium) {
+      @include breakpoint(large) {
         flex-direction: row;
+        // display: grid;
+        // column-gap: 50px;
       }
 
       //       #clone {
